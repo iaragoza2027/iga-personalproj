@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>landing</title><link rel="icon" type="image" href="">
+        <link href="https://fonts.googleapis.com/css2?family=Recursive:CASL@1&display=swap" rel="stylesheet"> 
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Comic+Relief:wght@400;700&display=swap" rel="stylesheet">
+        <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+        <style type="text/tailwindcss">
+            @theme {
+                --color-bgA: #F5F4F1;
+                --color-accentA: #A7C1A8;
+                --color-accentB: #D1D8BE;
+                --color-cardbg: #FEFCFB;
+                --color-textA: #222B2B;
+                --color-textB: #788f8d;
+                --font-body: "Recursive";
+                --font-header: "Comic Relief";
+            }
+            ::-moz-selection { /* Code for Firefox */
+                @apply bg-accentB text-bgA;
+            }
+
+            ::selection {
+                @apply bg-accentA text-bgA;
+            }
+            .body {
+                @apply w-screen p-8 bg-bgA absolute text-textA bg-[linear-gradient(to_right,#D1D8BE_1px,transparent_1px),linear-gradient(to_bottom,#D1D8BE_1px,transparent_1px)] bg-[size:28px_28px];
+            }
+            .card {
+                @apply shadow-lg bg-bgA my-4 rounded-md hover:shadow-xl;
+            }
+            .card-header {
+                @apply  font-bold text-lg bg-linear-to-r from-accentA to-accentB w-full p-3 px-4 rounded-t-md;
+            }
+            .ul-nav {
+                @apply divide-accentB divide-y;
+            }
+            .li-nav {
+                @apply p-2 hover:bg-accentB;
+            }
+            .li-nav-active {
+                @apply p-2 bg-accentB;
+            }
+        </style>
+    </head>
+
+    <!-- https://colorhunt.co/palette/819a91a7c1a8d1d8beeeefe0 -->
+
+    <body class="body" onload="startTime()">
+        <div class="w-2/3 mx-auto">
+            <img src="media/banner.png" alt="title" class="">
+        </div>
+        <div class="font-body w-2/3 mx-auto flex">
+            
+            <section id="left-nav" class="w-1/4 inline-block mx-8">
+                <div>
+                    <div class="card">
+                        <div class="card-header">
+                            <span class="">menu</span>
+                        </div>
+                        <img src="media/nav-banner.png" alt="handwritten logo that says 'paperplain'" class="w-full">
+                        <nav class="p-4 pt-0">
+                            <ul class="ul-nav my-3">
+                                <li class="li-nav-active"><a href="index.html">home</a></li>
+                                <li class="li-nav"><a href="">links</a></li>
+                                <li class="li-nav"><a href="">art</a></li>
+                                <li class="li-nav"><a href="whatsup.html">what's up</a></li>
+                                <li class="li-nav"><a href="">????</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                    <footer class="text-right text-gray-400">
+                        <span>iga-personalproj.github.io</span>
+                        <br><span id="clock"></span>
+                    </footer>
+                </div>
+            </section>
+
+            <section id="right-content" class="w-3/4 inline-block" mx-8>
+                <div>
+                    <div class="card">
+                        <div>
+                            
+                        </div>
+                        <div class="card-header">
+                            <span class="">welcome! welcome! welcome!</span>
+                        </div>
+                        <div class="max-h-1/2 bg-[radial-gradient(#e5e7eb_1.5px,transparent_1px)] [background-size:16px_16px]">
+                            <div class="h-full flex">
+                                <div class="lg:w-2/3 md:w-7/12 p-8  m-auto bg-[url(https://www.themahoganystore.com/cdn/shop/files/Mahogany62b0987a71146962b0987a71349.6905513662b0987a71349.jpg?v=1738582204)] bg-cover">
+                                    <div class=" bg-bgA/85 rounded-md m-5 p-6">
+                                        <p class="text-lg">hello!! you've landed on my website, somehow. while you're still here, how about perusing the site, hm? </p>
+                                    </div>
+                                    
+                                </div>
+                                <div class="lg:w-1/3 md:w-5/12 h-auto bg-[url(media/profile.png)] bg-center bg-contain bg-no-repeat scale-135 z-40 hover:rotate-10 transition ease-out duration-250"></div>
+                            </div>
+                            <div class="flex my-0">
+                                <div class="w-2/5 p-5">
+                                    <div class="p-3 mb-3 text-center text-lg font-bold bg-accentB">where next?</div>
+                                    <div class="p-5 mb-3 border-dashed border-2 border-textB">
+                                        <h2 class="text-lg">check out my art</h2>
+                                    </div>
+                                    <div class="p-5 mb-3 border-dashed border-2 border-textB">
+                                        <h2 class="text-lg">find my links</h2>
+                                    </div>
+                                    <div class="p-5 border-dashed border-2 border-textB">
+                                        <h2 class="text-lg">see what's up</h2>
+                                    </div>
+                                </div>
+                                <div class="w-3/5 p-8 bg-accentB">
+                                    <h2 class="text-xl font-bold">about the site</h2>
+                                    <hr class="my-3 bg-[#687a78] h-1 border-none rounded-xl">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+        
+        <script>
+        function startTime() {
+            const today = new Date();
+            let h = today.getHours();
+            let m = today.getMinutes();
+            let s = today.getSeconds();
+            m = checkTime(m);
+            s = checkTime(s);
+            document.getElementById('clock').innerHTML =  h + ":" + m + ":" + s;
+            setTimeout(startTime, 1000);
+        }
+
+        function checkTime(i) {
+            if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
+            return i;
+        }
+        </script>
+    </body>
+</html>
