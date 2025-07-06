@@ -1,0 +1,61 @@
+<html lang="en">
+<head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>paperplain's page</title><link rel="icon" type="image" href="">
+        <link rel="icon" href="https://decohoard.carrd.co/assets/images/gallery121/f8df4e64.gif?v=e0827b7e" type="image/gif">
+        <link href="https://fonts.googleapis.com/css2?family=Recursive:CASL@1&display=swap" rel="stylesheet"> 
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Comic+Relief:wght@400;700&display=swap" rel="stylesheet">
+        <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+        <style type="text/tailwindcss">
+            @theme {
+                --color-bgA: #F5F4F1;
+                --color-accentA: #A7C1A8;
+                --color-accentB: #D1D8BE;
+                --color-cardbg: #FEFCFB;
+                --color-textA: #222B2B;
+                --color-textB: #788f8d;
+                --font-body: "Recursive";
+                --font-header: "Comic Relief";
+            }
+            ::-moz-selection { /* Code for Firefox */
+                @apply bg-accentB text-bgA;
+            }
+
+            ::selection {
+                @apply bg-accentA text-bgA;
+            }
+            .body {
+                @apply w-screen p-8 bg-bgA absolute text-textA bg-[linear-gradient(to_right,#D1D8BE_1px,transparent_1px),linear-gradient(to_bottom,#D1D8BE_1px,transparent_1px)] bg-[size:28px_28px];
+            }
+            .card {
+                @apply shadow-lg bg-bgA my-4 rounded-md hover:shadow-xl;
+            }
+            .card-header {
+                @apply  font-bold text-lg bg-linear-to-r from-accentA to-accentB w-full p-3 px-4 rounded-t-md;
+            }
+            .ul-nav {
+                @apply divide-accentB divide-y;
+            }
+            .li-nav {
+                @apply p-2 hover:bg-accentB;
+            }
+            .li-nav-disabled {
+                @apply p-2 text-accentB;
+            }
+            .li-nav-active {
+                @apply p-2 bg-accentB;
+            }
+        </style>
+    </head>
+<body class="bg-black">
+    <audio src="media/bark.ogg" id="bark"></audio>
+    <img src="https://undertale.wiki/images/Annoying_Dog_overworld_dangling.gif?cb=iqxc17" alt="" id="dog" onclick="bark()" class="mx-auto scale-150">
+
+    <script>
+        let bark = () => new Audio("media/bark.ogg").play()
+    </script>
+</body>
+</html>
