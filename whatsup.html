@@ -21,10 +21,6 @@
                 --font-body: "Recursive";
                 --font-header: "Comic Relief";
             }
-            ::-moz-selection { /* Code for Firefox */
-                @apply bg-accentB text-bgA;
-            }
-
             ::selection {
                 @apply bg-accentA text-bgA;
             }
@@ -42,6 +38,9 @@
             }
             .li-nav {
                 @apply p-2 hover:bg-accentB;
+            }
+            .li-nav-disabled {
+                @apply p-2 text-accentB;
             }
             .li-nav-active {
                 @apply p-2 bg-accentB;
@@ -70,8 +69,8 @@
                             </div>
                             <ul class="ul-nav my-3">
                                 <li class="li-nav"><a href="index.html">home</a></li>
-                                <li class="li-nav">links</li>
-                                <li class="li-nav">art</li>
+                                <li class="li-nav-disabled">links</li>
+                                <li class="li-nav-disabled">art</li>
                                 <li class="li-nav-active"><a href="whatsup.html">what's up</a></li>
                                 <li class="li-nav"><a href="dog.html">????</a></li>
                             </ul>
@@ -94,17 +93,47 @@
                             <span class="">what's up</span>
                         </div>
                         <div class="bg-[radial-gradient(#e5e7eb_1.5px,transparent_1px)] [background-size:16px_16px]">
-                            <div class="bg-cover h-50 w-full bg-[url(media/typewriter.jpg)]"></div>
+                            <div class="bg-cover h-65 w-full bg-[url(media/typewriter.jpg)]"></div>
                             <div class="p-5">
-                                <div class="p-3 mb-3 text-center text-lg font-bold bg-accentB">right now: re-reading Noli Me Tángere</div>
-                                <div class="flex h-fit">
-                                    <div class="w-2/5 my-auto p-6"><img src="https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1254798525i/6022991.jpg" alt="" class="shadow-2xl rounded -rotate-5 hover:rotate-3 transition ease-out duration-250"></div>
-                                    <div class="w-3/5 p-8 m-auto lg:text-lg overflow-scroll">
-                                        <p class="my-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex ipsum quasi quaerat vero. Optio, amet beatae fugit culpa ea ullam tempore earum placeat reprehenderit et vel doloremque reiciendis a ipsum?</p>
-                                        <p class="my-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque, minus sequi in unde reprehenderit dolorum ipsam mollitia vitae id!</p>
+                                <div class="my-4">
+                                    <div class="p-3 text-center text-lg font-bold bg-accentB">right now: re-reading Noli Me Tángere</div>
+                                    <div class="flex h-fit py-3">
+                                        <div class="lg:w-2/5 md:w-5/12 bg-[url(https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1254798525i/6022991.jpg)] drop-shadow-2xl bg-center bg-contain bg-no-repeat scale-85 -rotate-5 hover:rotate-1 transition ease-out duration-250 rounded"></div>
+                                        <div class="w-3/5 p-8 m-auto lg:text-lg overflow-scroll">
+                                            <p class="my-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex ipsum quasi quaerat vero. Optio, amet beatae fugit culpa ea ullam tempore earum placeat reprehenderit et vel doloremque reiciendis a ipsum?</p>
+                                            <p class="my-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque, minus sequi in unde reprehenderit dolorum ipsam mollitia vitae id!</p>
+                                        </div>
                                     </div>
                                 </div>
-                                <div class="p-3 my-3 mt-5 text-center text-lg font-bold bg-accentB">history</div>
+                                <div class="my-4 mt-12">
+                                    <div class="p-3 my- mt-5 text-lg font-bold bg-accentB text-center w-1/6">history</div>
+                                    <div class="py-3">
+                                        <table class="max-h-50 w-3/4 overflow-auto">
+                                            <tr class="">
+                                                <td class="p-4">07.07.2025</td>
+                                                <td>re-reading Noli Me Tángere</td>
+                                                <td>link</td>
+                                            </tr>
+                                            <tr class="">
+                                                <td class="p-4">06.16.2025</td>
+                                                <td>test post</td>
+                                                <td>link</td>
+                                            </tr>
+                                            <tr class="">
+                                                <td class="p-4">06.16.2025</td>
+                                                <td>'what's up' implemented</td>
+                                                <td>n/a</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="p-4">10.23.2024</td>
+                                                <td>site created</td>
+                                                <td>n/a</td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                    
+                                </div>
+                                
                             </div>
                             
                         </div>
